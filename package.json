@@ -1,0 +1,14 @@
+{
+  "name": "vue-pseudo",
+  "version": "1.0.0",
+  "description": "Emulate native pseudo class effect.",
+  "main": "",
+  "scripts": {},
+  "author": {
+    "name": "lixinliang",
+    "url": "https://github.com/lixinliang"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
