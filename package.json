@@ -4,11 +4,24 @@
   "description": "Emulate native pseudo class effect.",
   "main": "",
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lixinliang/vue-pseudo.git"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "pseudo",
+    "directive"
+  ],
   "author": {
     "name": "lixinliang",
     "url": "https://github.com/lixinliang"
   },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lixinliang/vue-pseudo/issues"
+  },
   "dependencies": {},
   "devDependencies": {}
 }
