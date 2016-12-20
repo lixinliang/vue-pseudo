@@ -1,8 +1,8 @@
 {
   "name": "vue-pseudo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Emulate native pseudo class effect.",
-  "main": "",
+  "main": "./vue-pseudo.js",
   "scripts": {},
   "repository": {
     "type": "git",
