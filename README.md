@@ -1,6 +1,7 @@
 [![npm](https://img.shields.io/npm/l/vue-pseudo.svg?style=flat-square)](https://www.npmjs.org/package/vue-pseudo)
 [![npm](https://img.shields.io/npm/v/vue-pseudo.svg?style=flat-square)](https://www.npmjs.org/package/vue-pseudo)
 [![npm](https://img.shields.io/npm/dm/vue-pseudo.svg?style=flat-square)](https://www.npmjs.org/package/vue-pseudo)
+[![bitHound Code](https://www.bithound.io/github/lixinliang/vue-pseudo/badges/code.svg)](https://www.bithound.io/github/lixinliang/vue-pseudo)
 
 # vue-pseudo
 > Emulate native pseudo class effect.
