@@ -6,6 +6,12 @@
 # vue-pseudo
 > Emulate native pseudo class effect.
 
+# Getting started
+
+```
+$ npm install --save-dev vue-pseudo
+```
+
 ## Usage
 ```js
 import VuePseudo from 'vue-pseudo';
