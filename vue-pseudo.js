@@ -1,7 +1,11 @@
+'use strict';
+
 const noop = () => {};
 
 const on = 'addEventListener';
 const off = 'removeEventListener';
+
+const mobile = /Android|webOS|iPhone|Windows Phone|iPod|iPad|BlackBerry|SymbianOS/i.test(navigator.userAgent);
 
 export default function ( Vue ) {
     Vue.directive('pseudo', {
@@ -14,9 +18,14 @@ export default function ( Vue ) {
             let el = this.el;
             let _listener = this._listener;
             if (this.arg == 'active') {
-                el[on]('touchstart', _listener, false);
-                el[on]('touchend', _listener, false);
-                el[on]('touchcancel', _listener, false);
+                if (mobile) {
+                    el[on]('touchstart', _listener, false);
+                    el[on]('touchend', _listener, false);
+                    el[on]('touchcancel', _listener, false);
+                } else {
+                    el[on]('mousedown', _listener, false);
+                    el[on]('mouseup', _listener, false);
+                }
             }
         },
         update ( value ) {
@@ -39,7 +48,7 @@ export default function ( Vue ) {
                 this._handler = function ( event ) {
                     classList.forEach(( className ) => {
                         if (className) {
-                            if (event.type == 'touchstart') {
+                            if (event.type == 'touchstart' || event.type == 'mousedown') {
                                 el.classList.add(className);
                             } else {
                                 el.classList.remove(className);
@@ -53,9 +62,14 @@ export default function ( Vue ) {
             let el = this.el;
             let _listener = this._listener;
             if (this.arg == 'active') {
-                el[off]('touchstart', _listener, false);
-                el[off]('touchend', _listener, false);
-                el[off]('touchcancel', _listener, false);
+                if (mobile) {
+                    el[off]('touchstart', _listener, false);
+                    el[off]('touchend', _listener, false);
+                    el[off]('touchcancel', _listener, false);
+                } else {
+                    el[off]('mousedown', _listener, false);
+                    el[off]('mouseup', _listener, false);
+                }
             }
         },
     });
